@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import sqlite3
+import os
 
 app = Flask(__name__)
 
@@ -24,4 +25,5 @@ def home():
     return render_template("dashboard.html", logs=logs)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.getenv("PORT", 5000))  # Use Railway's assigned port
+    app.run(host="0.0.0.0", port=port)
