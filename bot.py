@@ -6,7 +6,7 @@ import csv
 import os
 
 # Bot Configuration
-TOKEN = "MTMzOTE1MDQ2NDI2NDA0ODY0MA.GNeLTv.oWXm1fdHns9uZY7e3Zz2uFWjN3CJSRZg6_SUEo"  # Replace with your actual bot token
+TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # Replace with your actual bot token
 GUILD_ID = 1315015035264700477  # Replace with your server's ID
 CHANNEL_ID = 1339464747145363487  # Replace with your interview voice channel ID
 ALLOWED_USERS = [971987911757135963, 1070277989910204486]  # Replace with allowed user IDs
